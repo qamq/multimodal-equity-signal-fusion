@@ -157,7 +157,7 @@ def test_predict_preserves_original_index_and_row_identity(fitted_model, small_p
 def test_predict_keeps_duplicate_indices_duplicate_keys_and_invalid_rows(fitted_model, small_panel):
     rows = small_panel[small_panel["Date"] == small_panel["Date"].max()].copy()
     rows = pd.concat([rows, rows.iloc[:1]], ignore_index=True)
-    expected = fitted_model.predict(rows).to_numpy()
+    expected = fitted_model.predict(rows).to_numpy(copy=True)
     rows.index = pd.Index(["same"] * len(rows), name="duplicate")
     rows.iloc[1, rows.columns.get_loc("p_cnn")] = np.nan
     expected[1] = np.nan
