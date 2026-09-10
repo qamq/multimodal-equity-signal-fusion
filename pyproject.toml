@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multimodal-equity-signal-fusion"
+version = "0.1.0"
+description = "Leakage-aware multimodal signal fusion for cross-sectional equity research"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Quinn McMurtry"}]
+license = "LicenseRef-All-Rights-Reserved"
+license-files = ["NOTICE.md"]
+keywords = ["quantitative-research", "signal-fusion", "equities", "hidden-markov-model"]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scikit-learn>=1.3",
+    "tqdm>=4.65",
+]
+
+[project.optional-dependencies]
+research = [
+    "scipy>=1.10",
+    "statsmodels>=0.14",
+    "matplotlib>=3.7",
+    "pyarrow>=12",
+    "jupyter>=1.0",
+]
+dev = [
+    "pytest>=8",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

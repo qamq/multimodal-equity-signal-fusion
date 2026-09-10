@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*.tmp
+*.bak
+*~
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Data and model artifacts
+*.parquet
+*.pq
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.csv.gz
+*.zip
+*.7z
+
+# Research outputs
+WORK_SPACE/
+outputs/
+analysis_outputs/
+figures/generated/
+CACHE_DIR/
+
+# Private development records (older commits still require a separate history review)
+/docs/PUBLICATION_AUDIT.md
+/notebooks/archive/
+
+# Keep licensed inputs and generated predictions out of the public data directory.
+# Small, intentionally public examples belong in these explicit opt-in folders.
+/data/*
+!/data/README.md
+!/data/synthetic/
+!/data/fixtures/
+!/data/synthetic/**
+!/data/fixtures/**

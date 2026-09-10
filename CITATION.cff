@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "For the empirical study, cite the accompanying paper; software citation refers to the maintained implementation."
+title: "Multimodal Signal Fusion for Cross-Sectional Equity Returns"
+type: software
+version: 0.1.0
+authors:
+  - family-names: McMurtry
+    given-names: Quinn
+preferred-citation:
+  type: report
+  title: "Multimodal Signal Fusion for Cross-Sectional Equity Returns: Prediction, Implementation, and Capacity"
+  authors:
+    - family-names: McMurtry
+      given-names: Quinn
+  year: 2026
